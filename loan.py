@@ -1,8 +1,6 @@
-from collections import OrderedDict
 from utilities import date_range, duration_months, ds_days, update_df, timeit
 import pdb
 import pandas as pd
-# import numpy as np
 from pyxirr import xirr as py_xirr
 from datetime import datetime
 import logging
@@ -207,13 +205,6 @@ class Loan:
               "\n", "- Cash on Cash yield:", "{:.2%}".format(self.coc),
               )
 
-    def add_nb(self, df, nb):
-        # print(df["opening balance"] + nb)
-        df["opening balance"] = df["opening balance"] + nb
-        print(df)
-        return df
-
-    @timeit
     def facility_schedule__refresh(self):
         # CONTINUE HERE !! ========>>>
         schedule = self.facility_schedule

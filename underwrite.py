@@ -81,7 +81,6 @@ def main():
     print("\n")
     building.reporting()
     loan.reporting()
-    pdb.set_trace()
 
 
 # Check to see if this file is being run as the main module
